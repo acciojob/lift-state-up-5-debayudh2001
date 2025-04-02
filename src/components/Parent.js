@@ -6,7 +6,8 @@ const Parent = () => {
     return (
         <div>
             <h1>Parent Component</h1>
-            {isLoggedIn ? <p>Your are logged in!</p> : <Child setIsLoggedIn={setIsLoggedIn} />}
+            <Child isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            <p className={isLoggedIn ? "show" : "hide"}>You are logged in!</p>
         </div>
     )
 }

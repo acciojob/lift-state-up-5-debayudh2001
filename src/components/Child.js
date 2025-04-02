@@ -1,12 +1,12 @@
 import React from "react";
 
-const Child = ({setIsLoggedIn}) => {
+const Child = ({isLoggedIn,setIsLoggedIn}) => {
     function handleSubmit(e){
         e.preventDefault()
         setIsLoggedIn(true)
     }
     return (
-        <div>
+        <div className={isLoggedIn ? "hide" : "show"}>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="username">Username:</label>&nbsp;
                 <input type="text" name="username" />
